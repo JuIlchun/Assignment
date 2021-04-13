@@ -30,8 +30,8 @@ public class MainMenu {
 				AtoZ.printAtoZ();
 				break;
 			case 4:
-				DoSum DoSum = new DoSum();
-				DoSum.printSum();
+				Sum Sum = new Sum();
+				Sum.printSum();
 				break;
 			case 5:
 				Print99 Print99 = new Print99();
@@ -43,7 +43,7 @@ public class MainMenu {
 				break;
 			case 7:
 				GradingMenu GradingMenu = new GradingMenu();
-				GradingMenu.print();
+				GradingMenu.Menu();
 			}
 		}
 	}

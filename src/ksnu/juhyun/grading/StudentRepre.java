@@ -2,9 +2,9 @@ package ksnu.juhyun.grading;
 
 import java.util.Arrays;
 
-public class StudentAveMid {
-	int[] print(int array[]) {
-		int sum=0;
+public class StudentRepre {
+	int[] AveMid(int array[]) {
+		float sum=0;
 		int person = array.length;
 		for (int i=0;i<person;i++) {
 			sum+=array[i];
@@ -18,6 +18,21 @@ public class StudentAveMid {
 		else if (person%2!=0) {
 			System.out.println("중위값 : "+array[person/2]);
 		}
+		return array;
+	}
+	int[] MaxMin(int array[]) {
+		int person = array.length;
+		int max=0;
+		int min=100;
+		for (int i=0;i<person;i++) {
+			if (array[i]>max) {
+				max=array[i];
+			}
+			if (array[i]<min) {
+				min=array[i];
+			}
+		}
+		System.out.println("최고 점수 : "+max+"\n최저 점수 : "+min);
 		return array;
 	}
 }
