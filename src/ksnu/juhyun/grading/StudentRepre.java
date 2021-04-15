@@ -13,7 +13,7 @@ public class StudentRepre {
 		
 		Arrays.sort(array);
 		if (person%2==0) {
-			System.out.println("중위값 : "+array[person/2-1]+"과 "+array[person/2]);
+			System.out.println("중위값 : "+(array[person/2-1]+array[person/2])/2);
 		}
 		else if (person%2!=0) {
 			System.out.println("중위값 : "+array[person/2]);
