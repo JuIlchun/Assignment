@@ -8,21 +8,26 @@ public class Practice8 {
 	void eight() {
 		try {
 			int amount=scan.nextInt();
-			int[] arrangement=new int[amount+1];
-			boolean[] isCheck= new boolean[100];
-			for (int i=1;i<amount+1;i++) {
-				int number = (int)(Math.random()*100+1);
-				while(isCheck[number]==true) {
-					number = (int)(Math.random()*100+1);
-				}
-				arrangement[i]=number;
-				isCheck[arrangement[i]]=true;
-				System.out.print(arrangement[i]+" ");
-			}
-		} catch (InputMismatchException i) {
+			inputArray(amount);
+		}
+		catch (InputMismatchException i) {
 			System.out.println("InputMismatchException 발생!");
-		} catch (NumberFormatException n) {
-			System.out.println("NumberFormatException 발생!");
+		}
+	}
+	void inputArray(int amount) {
+		int[] arrangement=new int[amount+1];
+		boolean[] isCheck= new boolean[100];
+		
+		for (int i=1;i<amount+1;i++) {
+			int number = (int)(Math.random()*100+1);
+			
+			while(isCheck[number]==true) {
+				number = (int)(Math.random()*100+1);
+			}
+			arrangement[i]=number;
+			isCheck[arrangement[i]]=true;
+			
+			System.out.print(arrangement[i]+" ");
 		}
 	}
 }

@@ -14,6 +14,10 @@ public class Practice10 {
 			arrangement[x][y]=number;
 			isCheck[x][y]=true;
 		}
+		printArray(arrangement);
+	}
+	
+	void printArray(int[][] arrangement) {
 		for (int i=0;i<4;i++) {
 			for (int j=0;j<4;j++) {
 				System.out.print(arrangement[i][j]+" ");
