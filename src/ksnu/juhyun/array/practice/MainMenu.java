@@ -1,5 +1,6 @@
 package ksnu.juhyun.array.practice;
 
+import ksnu.juhyun.midterm.MidtermMenu;
 import java.util.Scanner;
 
 public class MainMenu {
@@ -42,14 +43,16 @@ public class MainMenu {
 				Multipl.ChooseMultipl();
 				break;
 			case 7:
-				break;
-			case 8:
 				GradingMenu GradingMenu = new GradingMenu();
 				GradingMenu.Menu();
 				break;
-			case 9:
+			case 8:
 				ArrayMenu ArrayMenu = new ArrayMenu();
 				ArrayMenu.menu();
+				break;
+			case 9:
+				MidtermMenu MidtermMenu = new MidtermMenu();
+				MidtermMenu.menu();
 				break;
 			}
 		}

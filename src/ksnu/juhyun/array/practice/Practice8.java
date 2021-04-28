@@ -7,6 +7,7 @@ public class Practice8 {
 	Scanner scan = new Scanner(System.in);
 	void eight() {
 		try {
+			System.out.print("정수를 몇개 저장할까요? ");
 			int amount=scan.nextInt();
 			inputArray(amount);
 		}
@@ -16,7 +17,7 @@ public class Practice8 {
 	}
 	void inputArray(int amount) {
 		int[] arrangement=new int[amount+1];
-		boolean[] isCheck= new boolean[100];
+		boolean[] isCheck= new boolean[101];
 		
 		for (int i=1;i<amount+1;i++) {
 			int number = (int)(Math.random()*100+1);
@@ -28,6 +29,7 @@ public class Practice8 {
 			isCheck[arrangement[i]]=true;
 			
 			System.out.print(arrangement[i]+" ");
+			if (i%10==0) {System.out.println("");}
 		}
 	}
 }
