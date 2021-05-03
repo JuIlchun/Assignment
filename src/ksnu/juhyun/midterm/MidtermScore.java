@@ -9,6 +9,7 @@ public class MidtermScore {
 		int people=inputPeople();
 		int[][] score = new int[3][people];
 		for (int i=0;i<people;i++) {
+			System.out.print(i+"번 학생 성적 입력> ");
 			for (int j=0;j<3;j++) {
 				try {
 					score[j][i]=scan.nextInt();
@@ -28,7 +29,7 @@ public class MidtermScore {
 			people=scan.nextInt();
 		}
 		catch (InputMismatchException e) {
-			System.out.print("오류발생! InputMismatchException!");
+			System.out.print("오류발생! InputMismatchException!\n");
 		}
 		return people;
 	}
