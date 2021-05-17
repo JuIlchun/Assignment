@@ -1,11 +1,17 @@
 package ksnu.juhyun.report07;
 
 public class Professor extends Researcher{
-	public String[] position = {"조교수","부교수","교수"};
-	private int positionNumber;
-	public String[] tostring() {
-		String[] number=new String[6];
-		number[5]=position[positionNumber];
-		return number;
+	protected String position;
+	
+	public String toString() {
+		return Integer.toString(citizenNumber)+" "+name+" "+Integer.toString(birthyear)+" "+Integer.toString(employeeNumber)+" "+dept+" "+position;
+	}
+	public void inputPerson() {
+		citizenNumber=scan.nextInt();
+		name=scan.next();
+		birthyear=scan.nextInt();
+		employeeNumber=scan.nextInt();
+		dept=scan.next();
+		position=scan.next();
 	}
 }

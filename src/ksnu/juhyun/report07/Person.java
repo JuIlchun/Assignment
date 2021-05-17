@@ -1,14 +1,19 @@
 package ksnu.juhyun.report07;
 
+import java.util.*;
+
 public class Person {
-	public int citizenNumber;
-	public String name;
-	public int birthyear;
-	public String[] tostring() {
-		String[] number=new String[3];
-		number[0]=Integer.toString(citizenNumber);
-		number[1]=name;
-		number[2]=Integer.toString(birthyear);
-		return number;
+	Scanner scan = new Scanner(System.in);
+	protected int citizenNumber;
+	protected String name;
+	protected int birthyear;
+	
+	public String toString() {
+		return Integer.toString(citizenNumber)+" "+name+" "+Integer.toString(birthyear);
+	}
+	public void inputPerson() {
+		citizenNumber=scan.nextInt();
+		name=scan.next();
+		birthyear=scan.nextInt();
 	}
 }
