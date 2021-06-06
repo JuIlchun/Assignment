@@ -1,6 +1,6 @@
 package ksnu.juhyun.report08;
 
-public class Book {
+public class Book implements Comparable<Book>{
 	private int id; //일련번호
 	private String name; //제목
 	private String author; //저자이름
@@ -8,6 +8,7 @@ public class Book {
 	private String publisher; //출판사
 	private int price; //가격
 	private int amount; //보유권수
+	private int Ranking;//인기도서 Ranking을 표시하기 위한 int
 	
 	public int getId() {
 		return id;
@@ -64,6 +65,28 @@ public class Book {
 	public void setAmount(int amount) {
 		this.amount = amount;
 	}
+
+	public int getRanking() {
+		return Ranking;
+	}
+
+	public void setRanking(int ranking) {
+		Ranking = ranking;
+	}
+
+	@Override
+	public int compareTo(Book book) {
+		if (this.Ranking<book.Ranking) {
+			return 1;
+		}
+		else if (this.Ranking==book.Ranking) {
+			return 0;
+		}
+		else {
+			return -1;
+		}
+	}
+	
 }
 // 초반에 이렇게 입력을 받았으나 Getter/Setter 함수를 쓰기 위해 변경함
 //	void inputInfo() {

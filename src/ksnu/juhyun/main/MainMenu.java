@@ -2,7 +2,10 @@ package ksnu.juhyun.main;
 
 import ksnu.juhyun.midterm.MidtermMenu;
 import ksnu.juhyun.report07.DataBaseManager;
+import ksnu.juhyun.report07.Person;
+import ksnu.juhyun.report08.Book;
 import ksnu.juhyun.report08.Library;
+import ksnu.juhyun.report09.InOutLibrary;
 
 import java.util.Scanner;
 
@@ -11,7 +14,8 @@ public class MainMenu {
 	{
 		Scanner Scan = new Scanner(System.in);
 		MainMenu MainMenu = new MainMenu();
-				
+		Person[] people = {};
+		Book[] books = new Book[1000];//객체 배열 선언
 		int number=0;
 		while (true)
 		{
@@ -20,6 +24,7 @@ public class MainMenu {
 			switch(number)
 			{
 			case 0:
+				Scan.close();
 				return;
 			case 1:
 				Coffee Coffee = new Coffee();
@@ -59,11 +64,15 @@ public class MainMenu {
 				break;
 			case 10:
 				DataBaseManager DBManager = new DataBaseManager();
-				DBManager.mainMenu();
+				people=DBManager.mainMenu(people);
 				break;
 			case 11:
 				Library Library = new Library();
-				Library.LibraryMenu();
+				books=Library.LibraryMenu(books);
+				break;
+			case 12:
+				InOutLibrary InOutLibrary = new InOutLibrary();
+				InOutLibrary.libraryMenu(people,books);
 			}
 		}
 	}
@@ -80,8 +89,9 @@ public class MainMenu {
 				+ "7) 학생성적 처리 프로그램\r\n"
 				+ "8) 배열 연습문제 풀기\r\n"
 				+ "9) 성적처리 프로그램(중간고사)\r\n"
-				+ "10) 대학 DB 관리 프로그램\r\n"
-				+ "11) 도서관 프로그램\r\n"
+				+ "10) 대학 DB 관리 프로그램(과제07)\r\n"
+				+ "11) 도서관 프로그램(과제08)\r\n"
+				+ "12) 도서관 프로그램-대여반납(과제09)\r\n"
 				+ "0) 종료");
 	}
 }

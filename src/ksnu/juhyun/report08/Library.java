@@ -3,9 +3,8 @@ package ksnu.juhyun.report08;
 public class Library {
 	KeyboardInput scan = new KeyboardInput();//키보드 입력 클래스 호출
 	
-	public void LibraryMenu() {
+	public Book[] LibraryMenu(Book[] books) {
 		SearchBook SearchBook = new SearchBook();//5번과 6번 SearchBook으로 호출
-		Book[] books = new Book[1000];//객체 배열 선언
 		int serial=0;//책이 배열에서 어디까지 입력되어 있는지 구분하는 변수 (도서의 갯수)
 		int number = 0;//switch의 메뉴 변수
 		while(true) {
@@ -41,7 +40,7 @@ public class Library {
 				DeleteBook.deleteBook(books, serial);
 				break;
 			case 0:
-				return;
+				return books;
 			
 				
 			}

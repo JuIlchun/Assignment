@@ -4,8 +4,7 @@ import java.util.Scanner;
 
 public class DataBaseManager {
 	Scanner scan = new Scanner(System.in);
-	public void mainMenu() {
-		Person[] people = {};
+	public Person[] mainMenu(Person[] people) {
 		int input;
 		while(true) {
 			printMenu();
@@ -16,7 +15,7 @@ public class DataBaseManager {
 			case 3:	searchPersonData(people); break;
 			case 4: people=editPersonData(people); break;
 			case 5: people=deletePersonData(people); break;
-			case 0: return;
+			case 0: return people;
 			}
 		}
 	}
